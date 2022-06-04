@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quản lý nhân viên</title>
+    <title>Quản lý san pham</title>
 
     <!-- Font Awesome -->
     <link
@@ -22,7 +22,7 @@
 
     <!-- My CSS -->
     <link rel="stylesheet" href="css/modal.css" />
-
+    <link rel="stylesheet" href="./my-css/style.css" />
     <link rel="stylesheet" href="css/style4.css" />
 
     <link rel="stylesheet" type="text/css" href="css/main.css" />
@@ -126,20 +126,214 @@
             <!-- Header -->
             <div class="card-header myCardHeader">
               <div class="row">
+                <!-- Modal body -->
+                <div class="modal-body">
+                  <form role="form" id="formProduct">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"
+                            ><i class="fa fa-user"></i
+                          ></span>
+                        </div>
+                        <input
+                          type="text"
+                          name="tk"
+                          id="i-name"
+                          class="form-control input-sm"
+                          placeholder="name"
+                        />
+                      </div>
+
+                      <span class="sp-thongbao" id="tbTKNV"></span>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"
+                            ><i class="fa fa-address-book"></i
+                          ></span>
+                        </div>
+                        <input
+                          type="name"
+                          name="name"
+                          id="i-price"
+                          class="form-control input-sm"
+                          placeholder="price"
+                        />
+                      </div>
+                      <span class="sp-thongbao" id="tbTen"></span>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"
+                            ><i class="fa fa-envelope"></i
+                          ></span>
+                        </div>
+                        <input
+                          type="name"
+                          name="name"
+                          id="i-screen"
+                          class="form-control input-sm"
+                          placeholder="screen"
+                        />
+                      </div>
+
+                      <span class="sp-thongbao" id="tbEmail"></span>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"
+                            ><i class="fa fa-key"></i
+                          ></span>
+                        </div>
+                        <input
+                          type="name"
+                          name="name"
+                          id="i-bcame"
+                          class="form-control input-sm"
+                          placeholder="back camera"
+                        />
+                      </div>
+                      <span class="sp-thongbao" id="tbMatKhau"></span>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"
+                            ><i class="fa fa-calendar"></i
+                          ></span>
+                        </div>
+                        <input
+                          type="name"
+                          name="name"
+                          id="i-fcame"
+                          class="form-control input-sm"
+                          placeholder="front camera"
+                        />
+                      </div>
+
+                      <span class="sp-thongbao" id="tbNgay"></span>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"
+                            ><i class="fa fa-money" aria-hidden="true"></i
+                          ></span>
+                        </div>
+                        <input
+                          type="name"
+                          name="name"
+                          id="i-img"
+                          class="form-control input-sm"
+                          placeholder="image"
+                        />
+                      </div>
+                      <span class="sp-thongbao" id="tbLuongCB"></span>
+                    </div>
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"
+                            ><i class="fa fa-briefcase"></i
+                          ></span>
+                        </div>
+                        <input
+                          type="name"
+                          name="name"
+                          id="i-desc"
+                          class="form-control input-sm"
+                          placeholder="desc"
+                        />
+                      </div>
+
+                      <span class="sp-thongbao" id="tbChucVu"></span>
+                    </div>
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"
+                            ><i class="fa fa-clock-o" aria-hidden="true"></i
+                          ></span>
+                        </div>
+                        <input
+                          type="name"
+                          name="name"
+                          id="i-quantity"
+                          class="form-control input-sm"
+                          placeholder="Quantity"
+                        />
+                      </div>
+                      <span class="sp-thongbao" id="tbGiolam"></span>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"
+                            ><i class="fa fa-clock-o" aria-hidden="true"></i
+                          ></span>
+                        </div>
+                        <input
+                          type="name"
+                          name="name"
+                          id="i-type"
+                          class="form-control input-sm"
+                          placeholder="type"
+                        />
+                      </div>
+                      <span class="sp-thongbao" id="tbGiolam"></span>
+                    </div>
+                  </form>
+                  <div
+                    class="modal-footer"
+                    id="modal-footer"
+                    style="justify-content: center"
+                  >
+                    <button
+                      id="btnThemSP"
+                      type="button"
+                      class="btn btn-success"
+                    >
+                      Thêm sản phẩm
+                    </button>
+                    
+                    <button
+                      id="btnSuaSP"
+                      type="button"
+                      class="btn btn-success"
+                      style="display: none"
+                    >
+                      Cập nhật sản phẩm
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Modal footer -->
+              </div>
+              <div class="row">
                 <div class="col-md-6">
                   <h3 class="text-left text-primary font-weight-bold">
-                    Danh sách nhân viên
+                    Danh sách sản phẩm
                   </h3>
                 </div>
                 <div class="col-md-6 text-right">
-                  <button
+                  <!-- <button
                     class="btn btn-primary"
                     id="btnThem"
                     data-toggle="modal"
                     data-target="#myModal"
                   >
-                    Thêm nhân viên
-                  </button>
+                    Thêm sản phẩm
+                  </button> -->
                 </div>
               </div>
             </div>
@@ -152,16 +346,11 @@
                     <input
                       type="text"
                       class="form-control"
-                      placeholder="Loại nhân viên"
+                      placeholder="Tên sản phẩm"
                       id="searchName"
-                      oninput="findStaff()"
                     />
                     <div class="input-group-prepend">
-                      <span
-                        class="input-group-text"
-                        onclick="findStaff()"
-                        id="btnTimNV"
-                      >
+                      <span class="input-group-text" id="btnTimSP">
                         <i class="fa fa-search"></i>
                       </span>
                     </div>
@@ -172,16 +361,18 @@
                 <thead class="text-primary">
                   <tr>
                     <th class="nowrap">
-                      <span class="mr-1">Tài khoản</span>
+                      <span class="mr-1">Name</span>
                       <i class="fa fa-arrow-up" id="SapXepTang"></i>
                       <i class="fa fa-arrow-down" id="SapXepGiam"></i>
                     </th>
-                    <th>Họ và tên</th>
-                    <th>Email</th>
-                    <th>Ngày làm</th>
-                    <th>Chức vụ</th>
-                    <th>Tổng lương</th>
-                    <th>Xếp loại</th>
+                    <th>Price</th>
+                    <th>Screen</th>
+                    <th>Back Camera</th>
+                    <th>Front Camera</th>
+                    <th>Img</th>
+                    <th>Desc</th>
+                    <th>Quantity</th>
+                    <th>Type</th>
                     <th><em class="fa fa-cog"></em></th>
                   </tr>
                 </thead>
@@ -230,9 +421,9 @@
                   <input
                     type="text"
                     name="tk"
-                    id="tknv"
+                    id="i-name"
                     class="form-control input-sm"
-                    placeholder="Tài khoản"
+                    placeholder="name"
                   />
                 </div>
 
@@ -249,9 +440,9 @@
                   <input
                     type="name"
                     name="name"
-                    id="name"
+                    id="i-price"
                     class="form-control input-sm"
-                    placeholder="Họ và tên"
+                    placeholder="price"
                   />
                 </div>
                 <span class="sp-thongbao" id="tbTen"></span>
@@ -265,11 +456,11 @@
                     ></span>
                   </div>
                   <input
-                    type="email"
-                    name="email"
-                    id="email"
+                    type="name"
+                    name="name"
+                    id="i-screen"
                     class="form-control input-sm"
-                    placeholder="Email"
+                    placeholder="screen"
                   />
                 </div>
 
@@ -284,11 +475,11 @@
                     ></span>
                   </div>
                   <input
-                    type="password"
-                    name="password"
-                    id="password"
+                    type="name"
+                    name="name"
+                    id="i-bcame"
                     class="form-control input-sm"
-                    placeholder="Mật khẩu"
+                    placeholder="back camera"
                   />
                 </div>
                 <span class="sp-thongbao" id="tbMatKhau"></span>
@@ -302,11 +493,11 @@
                     ></span>
                   </div>
                   <input
-                    type="text"
-                    name="ngaylam"
-                    id="datepicker"
-                    class="form-control"
-                    placeholder="Ngày làm"
+                    type="name"
+                    name="name"
+                    id="i-fcame"
+                    class="form-control input-sm"
+                    placeholder="front camera"
                   />
                 </div>
 
@@ -321,11 +512,11 @@
                     ></span>
                   </div>
                   <input
-                    type="text"
-                    name="luongCB"
-                    id="luongCB"
+                    type="name"
+                    name="name"
+                    id="i-img"
                     class="form-control input-sm"
-                    placeholder="Lương cơ bản"
+                    placeholder="image"
                   />
                 </div>
                 <span class="sp-thongbao" id="tbLuongCB"></span>
@@ -337,12 +528,13 @@
                       ><i class="fa fa-briefcase"></i
                     ></span>
                   </div>
-                  <select class="form-control" id="chucvu">
-                    <option>Chọn chức vụ</option>
-                    <option>Sếp</option>
-                    <option>Trưởng phòng</option>
-                    <option>Nhân viên</option>
-                  </select>
+                  <input
+                    type="name"
+                    name="name"
+                    id="i-desc"
+                    class="form-control input-sm"
+                    placeholder="desc"
+                  />
                 </div>
 
                 <span class="sp-thongbao" id="tbChucVu"></span>
@@ -355,11 +547,29 @@
                     ></span>
                   </div>
                   <input
-                    type="text"
-                    name="gioLam"
-                    id="gioLam"
+                    type="name"
+                    name="name"
+                    id="i-quantity"
                     class="form-control input-sm"
-                    placeholder="Giờ làm"
+                    placeholder="Quantity"
+                  />
+                </div>
+                <span class="sp-thongbao" id="tbGiolam"></span>
+              </div>
+
+              <div class="form-group">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"
+                      ><i class="fa fa-clock-o" aria-hidden="true"></i
+                    ></span>
+                  </div>
+                  <input
+                    type="name"
+                    name="name"
+                    id="i-type"
+                    class="form-control input-sm"
+                    placeholder="type"
                   />
                 </div>
                 <span class="sp-thongbao" id="tbGiolam"></span>
@@ -369,12 +579,7 @@
 
           <!-- Modal footer -->
           <div class="modal-footer" id="modal-footer">
-            <button
-              id="btnThemNV"
-              type="button"
-              class="btn btn-success"
-              onclick="createStaff()"
-            >
+            <button id="btnThemSP" type="button" class="btn btn-success">
               Thêm người dùng
             </button>
 
@@ -415,7 +620,13 @@
 	<script>
 		new WOW().init();
 	</script>  -->
-
+    <!-- axios -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+      integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <!-- <script src="js/modal.js"></script> -->
 
     <script type="text/javascript">
@@ -425,7 +636,7 @@
         });
       });
     </script>
-    <script src="./my-js/staff.js"></script>
-    <script src="./my-js/main.js"></script>
+    <!-- <script type="module" src="./my-js/product.js"></script> -->
+    <script type="module" src="./myjs/index.js"></script>
   </body>
 </html>
